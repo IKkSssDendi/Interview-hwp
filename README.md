@@ -1,37 +1,72 @@
-# interview-hwh
+# 笔试
+<!-- TOC -->
 
-#### 介绍
-黄伟鹏笔试
+- [笔试](#笔试)
+    - [1. 从多个网页爬取内容，然后进行解析](#1-从多个网页爬取内容然后进行解析)
+    - [2. 编写 quicksort](#2-编写-quicksort)
+    - [3. 实现一个二叉树，使插入、查询、删除的时间复杂度为O(logn)](#3-实现一个二叉树使插入查询删除的时间复杂度为ologn)
+    - [4. 请用2种方式实现单例模式](#4-请用2种方式实现单例模式)
 
-#### 软件架构
-软件架构说明
+<!-- /TOC -->
 
+1. 所有题目使用typescript 2.0以上版本来编写代码，不能采用javascript兼容模式, 建议使用vscode 进行编码。
 
-#### 安装教程
+    提示：
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+    ```sh
+    cd async-example
+    npm install # 下载依赖，依赖定义在package.json
+    node_modules/.bin/ts-node test.ts # 运行ts文件
+    ```
 
-#### 使用说明
+2. 请看async-example这个文件夹的例子
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+3. 题目后面有相关提示可以参考
 
-#### 参与贡献
+提交格式：
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1. 说明使用markdown文档在gitee提交
+2. 代码直接提交
 
+## 1. 从多个网页爬取内容，然后进行解析
 
-#### 特技
+有10个网页，1.txt 到 10.txt
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+http://dy-public.oss-cn-shenzhen.aliyuncs.com/interviewTestData/1.txt
+
+```xml
+<abc> <de
+f>data : 1992; name : agent 1 </def></abc>
+```
+
+0. 格式有可能有区别
+1. 用 promise, async, await 分别实现并发、串行爬取
+2. 网页下载使用nodejs的http即可
+3. 使用正则表达式获取data后面的字段，将10个文件的data值全部获取，并相加
+
+## 2. 编写 quicksort
+参见QuickSort.ts文件，确保代码能在1000毫秒内通过测试
+
+## 3. 实现一个二叉树，使插入、查询、删除的时间复杂度为O(logn)
+```javascript
+class Tree {
+// implement your code
+}
+
+let t = new Tree()
+t.add(2)
+t.hasValue(2)  // true
+t.add(4)
+t.add(4)
+t.add(3)
+t.print()      // 升序输出，[2, 3, 4]
+t.remove(2)    // [3, 4]
+```
+
+## 4. 请用2种方式实现单例模式
+
+[node官方文档](https://nodejs.org/en/)
+
+[typescript文档](https://www.tslang.cn/)
+
+建议使用**visual studio code**进行编写。
